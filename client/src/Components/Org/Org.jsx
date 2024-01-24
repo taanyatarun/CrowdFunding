@@ -18,7 +18,7 @@ const Org = () => {
           </h1>
 
           <p className="description">
-            Your one stop solution for creating and ,anaging campaigns!
+            Your one stop solution for creating and ,managing campaigns!
           </p>
 
           <div className="connect">
