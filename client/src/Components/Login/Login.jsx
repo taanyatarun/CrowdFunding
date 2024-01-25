@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './Login.css'
 import '../../Home.css'
 import { Link } from 'react-router-dom'
@@ -47,7 +47,7 @@ const Login = () => {
                 <label htmlFor="password">Password</label>
                 <div className="input flex">
                   <BsFillShieldLockFill className='icon'/>
-                  <input type="password" id='username' placeholder='Enter password'/>
+                  <input type="password" id='password' placeholder='Enter password'/>
                 </div>
               </div>
 
