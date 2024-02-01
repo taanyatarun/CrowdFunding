@@ -80,3 +80,38 @@ app.post('/loginorg', (req, res)=>{
         }
     })
 })
+
+// Route for creating a campaign
+app.post('/organization', (req, res) => {
+    const { title, description, image, targetAmount, amountCollected } = req.body;
+
+    // Assuming you have a table named campaigns in your database
+    const SQL = 'INSERT INTO campaigns (title, description, image, target_amount, amount_collected) VALUES (?, ?, ?, ?, ?)';
+    const values = [title, description, image, targetAmount, amountCollected];
+
+    db.query(SQL, values, (err, results) => {
+        if (err) {
+            console.error("Error creating campaign:", err);
+            res.status(500).send({ error: "Error creating campaign" });
+        } else {
+            console.log("Campaign created successfully");
+            res.status(200).send({ message: "Campaign created successfully" });
+        }
+    });
+});
+
+// Route for fetching organization data
+app.get('/organizationcard', (req, res) => {
+    // Assuming you have a table named organizations in your database
+    const SQL = 'SELECT * FROM organizations';
+
+    db.query(SQL, (err, results) => {
+        if (err) {
+            console.error("Error fetching organizations:", err);
+            res.status(500).send({ error: "Error fetching organizations" });
+        } else {
+            console.log("Organizations fetched successfully");
+            res.status(200).send(results);
+        }
+    });
+});
