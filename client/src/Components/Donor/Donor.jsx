@@ -5,7 +5,7 @@ import './Donor.css'
 const Donor = () => {
   return (
     <main className="main">
-        <div className="">
+        <div className="connect">
             <a href="/">Log Out</a>
         </div>
       <div className="container">

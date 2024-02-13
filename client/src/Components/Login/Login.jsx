@@ -145,7 +145,7 @@ const Login = () => {
                 {/* </Link> */}
               </div>
 
-              <span className="forgotPassword">Forgot your password? <a href="">Click Here</a></span>
+              {/* <span className="forgotPassword">Forgot your password? <a href="">Click Here</a></span> */}
 
             </form>
           </div>
