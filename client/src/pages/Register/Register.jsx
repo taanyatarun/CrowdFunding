@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import './Register.css'
-import '../../Home.css'
 import { Link } from 'react-router-dom'
 import Axios from 'axios'
 

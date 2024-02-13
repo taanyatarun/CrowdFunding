@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import './Login.css'
-import '../../Home.css'
 import { Link, useNavigate } from 'react-router-dom'
 import Axios from 'axios'
 

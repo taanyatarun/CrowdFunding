@@ -1,9 +1,8 @@
 import { ConnectWallet } from "@thirdweb-dev/react";
-import "./Home.css";
-import Donor from "./Components/Donor/Donor";
-import Login from "./Components/Login/Login";
-import Org from "./Components/Org/Org";
-import Register from "./Components/Register/Register";
+import Donor from "./pages/Donor";
+import Login from "./pages/Login/Login";
+import Org from "./pages/Org";
+import Register from "./pages/Register/Register";
 
 import {
   createBrowserRouter,
@@ -24,7 +23,7 @@ const router = createBrowserRouter([
     element: <div><Donor/></div>
   },
   {
-    path: '/org',
+    path: '/org/*',
     element: <div><Org/></div>
   }
 ])
